@@ -1,1 +1,104 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+@import "~bootstrap/scss/bootstrap";
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$md-bdazzled-blue: (
+    50 : #e7ebf4,
+    100 : #c3cee3,
+    200 : #9caed1,
+    300 : #748dbe,
+    400 : #5674b0,
+    500 : #385ca2,
+    600 : #32549a,
+    700 : #2b4a90,
+    800 : #244186,
+    900 : #173075,
+    A100 : #adc0ff,
+    A200 : #7a99ff,
+    A400 : #4772ff,
+    A700 : #2e5fff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+$md-cornflower-blue: (
+    50 : #eef2fa,
+    100 : #d4dff2,
+    200 : #b7cae9,
+    300 : #9ab4e0,
+    400 : #84a4da,
+    500 : #6e94d3,
+    600 : #668cce,
+    700 : #5b81c8,
+    800 : #5177c2,
+    900 : #3f65b7,
+    A100 : #ffffff,
+    A200 : #d5e2ff,
+    A400 : #a2beff,
+    A700 : #89acff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$compassoc-primary: mat.define-palette($md-bdazzled-blue);
+$compassoc-accent: mat.define-palette($md-cornflower-blue);
+
+// The warn palette is optional (defaults to red).
+$compassoc-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$compassoc-theme: mat.define-light-theme((
+  color: (
+    primary: $compassoc-primary,
+    accent: $compassoc-accent,
+    warn: $compassoc-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($compassoc-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: 'Lato', "Helvetica Neue", sans-serif; }
