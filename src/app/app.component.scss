@@ -232,6 +232,10 @@ iframe {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#155BA6', endColorstr='#5895D6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   }
 
+  #instagram iframe {
+    height: 340px;
+  }
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -245,7 +249,9 @@ iframe {
   background: linear-gradient(135deg,  #155BA6 0%,#155BA6 80%,#155BA6 80%,#ffffff 80%,#ffffff 81%,#5895D6 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#155BA6', endColorstr='#5895D6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   }
-
+  #instagram iframe {
+    height: 480px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -264,6 +270,9 @@ iframe {
   #imagem-quem-somos-revestimentos {
     height: 415px;
   }
+  #instagram iframe {
+    height: 620px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -281,6 +290,9 @@ iframe {
   }
   #imagem-quem-somos-revestimentos {
     height: 348px;
+  }
+  #instagram iframe {
+    height: 860px;
   }
 }
 
